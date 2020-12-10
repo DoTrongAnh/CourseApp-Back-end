@@ -10,7 +10,7 @@ from rest_framework import serializers
 from api.models import Echo
 
 class EchoSerializer(serializers.ModelSerializer):
-    owner = serializers.ReadOnlyField(source='owner.username')
+    #owner = serializers.ReadOnlyField(source='owner.username')
     class Meta:
         model = Echo
-        fields = ['id', 'message', 'owner']
+        fields = ['id', 'message', 'created']
