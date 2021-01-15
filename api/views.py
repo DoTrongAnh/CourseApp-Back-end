@@ -3,8 +3,8 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse, JsonResponse
 from rest_framework.parsers import JSONParser
-from api.serializers import EchoSerializer
-from api.models import Echo
+from api.serializers import *
+from api.models import *
 from rest_framework.decorators import action
 from rest_framework.response import Response
 #from rest_framework import permissions
@@ -52,3 +52,15 @@ def echo_details(request, pk):
         echo.delete()
         return HttpResponse(status=204)
 """            
+
+class CourseOutlineViewSet(viewsets.ModelViewSet):
+    queryset = CourseOutline.objects.all()
+    serializer_class = CourseOutlineSerializer
+
+class LabViewSet(viewsets.ModelViewSet):
+    queryset = Lab.objects.all()
+    serializer_class = LabSerializer
+
+class AUViewSet(viewsets.ModelViewSet):
+    queryset = AU.objects.all()
+    serializer_class = AUSerializer

@@ -33,6 +33,7 @@ echo_highlight = EchoViewSet.as_view({
 '''
 router = DefaultRouter()
 router.register(r'echos', views.EchoViewSet)
+router.register(r'courseoutlines', views.CourseOutlineViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
