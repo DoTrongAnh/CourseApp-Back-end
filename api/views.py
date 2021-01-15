@@ -64,3 +64,4 @@ class LabViewSet(viewsets.ModelViewSet):
 class AUViewSet(viewsets.ModelViewSet):
     queryset = AU.objects.all()
     serializer_class = AUSerializer
+

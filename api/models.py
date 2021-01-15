@@ -79,8 +79,8 @@ class Instructor(models.Model):
 	role = models.CharField(blank=True, choices=Role.choices, max_length=15)
 	fname = models.CharField(blank=True, max_length=100)
 	lname = models.CharField(blank=True, max_length=100)
-	phone = models.CharField(blank=True, max_length=20)
-	office = models.CharField(blank=True, max_length=20)
+	phone = models.CharField(blank=True, max_length=30)
+	office = models.CharField(blank=True, max_length=30)
 	email = models.CharField(blank=True, max_length=200)
 	section = models.CharField(max_length=10)
 
